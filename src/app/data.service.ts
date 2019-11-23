@@ -51,7 +51,7 @@ export class DataService {
   }
 
   getData(): Item[] {
-    return Array(this.generateRandomValue(this.MIN_ITEM, this.MAX_ITEM)).map((v: any, i: number) => {
+    return [...Array(this.generateRandomValue(this.MIN_ITEM, this.MAX_ITEM))].map((v: any, i: number) => {
       const value = this.generateRandomValue(1, this.MAX_VALUE);
 
       return {
